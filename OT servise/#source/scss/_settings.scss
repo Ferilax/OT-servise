@@ -1,0 +1,40 @@
+@font-face {
+	font-family: 'FerilaxFont';
+	src: url('../fonts/Ferilaxfont-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+//? ------------------------------------------------ ШАБЛОНЫ ------------------------------------------------ ?//
+
+%tplButton {
+	&:hover {}
+
+	&:active {}
+}
+
+%displayFlex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+//? ------------------------------------------------ МИКСИНЫ ------------------------------------------------ ?//
+
+@mixin img ($objFit) {
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: $objFit;
+	}
+}
+
+//? ------------------------------------------------ ПЕРЕМЕННЫЕ ------------------------------------------------ ?//
+
+$whiteF5: #F5F6FA;
+$whiteEF: #EFF1F8;
+$whiteD7: #D7DCED;
+$gray8D: #8D96A5;
+$grayDark37: #373737;
+$orangeE2: #E24826;
+$green: #00B856;
+$greenDark: #007D3B;

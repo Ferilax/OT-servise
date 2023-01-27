@@ -168,7 +168,7 @@
 						<div class="profile__row">
 	
 							<section class="personal-settings profile__item">
-								<div class="profile__item-body">
+								<div class="profile__item-body active personal-settings__body">
 									<h2 class="personal-settings__title h2">Личная информация</h2>
 									<div class="personal-settings__avatar">
 										<img src="img/Home/main/avatar.png" alt="">
@@ -176,15 +176,51 @@
 									<div class="personal-settings__info personal-settings__fio">ФИО: <span class="personal-settings__span">Иванов Иван Иванович</span> </div>
 									<div class="personal-settings__info personal-settings__email">Почта: <span class="personal-settings__span">Exapmle@gmail.com</span> </div>
 									<div class="personal-settings__info personal-settings__tel">Телефон: <span class="personal-settings__span">8 948 736 88 33</span> </div>
-									<button class="personal-settings__button button-2"><span>Изменить данные</span></button>
+									<button class="personal-settings__button button-2" id="changePersonalData"><span>Изменить данные</span></button>
+									<div class="personal-settings__form-container">
+										<form action="#" class="personal-settings__form">
+											<div class="personal-settings__input-container personal-settings__input-avatar">
+												<label>
+													<img src="img/Home/main/avatar.png" alt="" id="userAvatar">
+													<input type="file" name="" id="inputAvatar">
+												</label>
+											</div>
+											<div class="personal-settings__input-container">
+												<input type="text" name="" id="" placeholder="Старый пароль">
+											</div>
+											<div class="personal-settings__input-container">
+												<input type="text" name="" id="" placeholder="Новый пароль">
+											</div>
+											<div class="personal-settings__input-container personal-settings__input-container_1">
+												<input type="text" name="" id="" placeholder="Новый пароль">
+											</div>
+											<button type="submit" class="personal-settings__button button personal-settings__button_1" id="submitPersonalData"><span>Сохранить изменения</span></button>
+											<button type="reset" class="personal-settings__button button-2" id="cancelPersonalData"><span>Отмена</span></button>
+										</form>
+									</div>
 								</div>
 							</section>
 	
 							<section class="password-settings profile__item">
-								<div class="profile__item-body">
+								<div class="profile__item-body active password-settings__body">
 									<h2 class="h2 password-settings__title">Настройки пароля</h2>
 									<div class="password-settings__info">Пароль: <span class="password-settings__password">*****************</span> </div>
-									<button class="password-settings__button button-2"><span>Сменить пароль</span></button>
+									<button class="password-settings__button button-2" id="changePassword"><span>Сменить пароль</span></button>
+									<div class="password-settings__form-container">
+										<form action="#" class="password-settings__form">
+											<div class="password-settings__input-container">
+												<input type="password" name="" id="" placeholder="Старый пароль">
+											</div>
+											<div class="password-settings__input-container">
+												<input type="password" name="" id="" placeholder="Новый пароль">
+											</div>
+											<div class="password-settings__input-container password-settings__input-container_1">
+												<input type="password" name="" id="" placeholder="Новый пароль">
+											</div>
+											<button type="submit" class="password-settings__button button password-settings__button_1" id="submitPassword"><span>Сменить пароль</span></button>
+											<button type="reset" class="password-settings__button button-2" id="cancelPassword"><span>Отмена</span></button>
+										</form>
+									</div>
 								</div>
 							</section>
 	
@@ -445,6 +481,30 @@
 				</footer>
 			</div>
 		</main>
+
+		<div class="modal-for-company">
+			<div class="modal-for-company__body">
+				<div class="modal-for-company__header">
+					<div class="h2">Подтверждение удаления</div>
+					<div class="modal-for-company__close"><img src="img/all/Close.svg" alt=""></div>
+				</div>
+				<div class="modal-for-company__main">
+					<form action="#" class="modal-for-company__form">
+						<div class="modal-for-company__title h2">
+							Для удаления компании “Логарифт ООО” <br> введите пинкод из сообщения
+						</div>
+						<button class="modal-for-company__button button-2"><span>Отправить код</span></button>
+						<div class="modal-for-company__info">
+							Код придет в сообщении по номеру <span class="modal-for-company__tel">8 938 848 22 33</span>
+						</div>
+						<div class="modal-for-company__input-container">
+							<input type="text" placeholder="Введите код из сообщения">
+						</div>
+						<button type="submit" class="modal-for-company__submit-button button">Удалить</button>
+					</form>
+				</div>
+			</div>
+		</div>
 
 	</div>
 

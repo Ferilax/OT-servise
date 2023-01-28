@@ -424,6 +424,13 @@ html {
   margin-bottom: 2.4rem;
 }
 
+.main-authorization {
+  padding: 0;
+}
+.main-authorization .container {
+  padding: 0;
+}
+
 .start-page {
   color: #373737;
 }
@@ -748,10 +755,6 @@ html {
   height: 1.6rem;
   margin-right: 1.2rem;
 }
-.main {
-  padding-top: 8rem;
-}
-
 .aside {
   position: fixed;
   top: 0;

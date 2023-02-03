@@ -6,9 +6,9 @@ const downDropListVisible = document.querySelector('.header-user__visible');
 
 const sectionPersonal = document.querySelector('.personal-settings');
 const personalSettingsFormContainer = sectionPersonal.querySelector('.personal-settings__form-container');
-const personalSettingsChangePass = sectionPersonal.querySelector('#changePersonalData');
-const personalSettingsSubmitPass = sectionPersonal.querySelector('#submitPersonalData');
-const personalSettingsCancelPass = sectionPersonal.querySelector('#cancelPersonalData');
+const personalSettingsChangeBtn = sectionPersonal.querySelector('#changePersonalData');
+const personalSettingsSubmitBtn = sectionPersonal.querySelector('#submitPersonalData');
+const personalSettingsCancelBtn = sectionPersonal.querySelector('#cancelPersonalData');
 const personalSettingsBody = sectionPersonal.querySelector('.personal-settings__body');
 const personalSettingsTitle = sectionPersonal.querySelector('.personal-settings__title');
 const inputAvatar = sectionPersonal.querySelector('#inputAvatar');
@@ -35,6 +35,8 @@ const specialistSettingsSelectInput = sectionSpecialist.querySelectorAll('.speci
 const modalCompany = document.querySelector('.modal-for-company');
 const modalCompanySubmit = document.querySelector('.modal-for-company__submit-button');
 let modalCounter;
+
+let userAvatarBefore;
 
 
 document.addEventListener("click", function (e) {
@@ -86,14 +88,15 @@ passwordSettingsCancelPass.addEventListener("click", function(e) {
 
 //! personal-settings
 
-personalSettingsChangePass.addEventListener("click", function (e) {
+personalSettingsChangeBtn.addEventListener("click", function (e) {
 	personalSettingsBody.classList.add('active');
 	personalSettingsTitle.innerHTML = 'Изменение личной информации';
 });
 
-personalSettingsCancelPass.addEventListener("click", function (e) {
+personalSettingsCancelBtn.addEventListener("click", function (e) {
 	personalSettingsBody.classList.remove('active');
 	personalSettingsTitle.innerHTML = 'Личная информация';
+	userAvatar.src = userAvatarBefore;
 });
 
 
@@ -104,6 +107,8 @@ inputAvatar.addEventListener("change", function(e) {
 
 	//? Получаем URL изображения
 	let fileURL = URL.createObjectURL(selectedFile);
+
+	userAvatarBefore = userAvatar.src;
 
 	userAvatar.src = fileURL;
 })

@@ -248,3 +248,12 @@ html {
 		font-size: 1.2rem;
 	}
 }
+
+.click-icon {
+	cursor: pointer;
+	width: 4rem;
+	height: 4rem;
+	padding: 1rem;
+	transform: translate(1rem, 0);
+	@include img(contain);
+}

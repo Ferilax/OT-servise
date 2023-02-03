@@ -17,8 +17,7 @@ new Swiper('.swiper1', {
 const loginForm = document.forms.login,
 		registerForm = document.forms.register,
 		sectionAuthorization = document.querySelector('.authorization'),
-		allInputContainers = sectionAuthorization.querySelectorAll('.authorization__input'),
-		allInput = sectionAuthorization.querySelectorAll('input'),
+		allInputContainers = sectionAuthorization.querySelectorAll('.input-container'),
 		loginButton = sectionAuthorization.querySelector('.authorization__login'),
 		registerButton = sectionAuthorization.querySelector('.authorization__register'),
 		inputPasswordL = loginForm.password,
@@ -118,19 +117,20 @@ class Validator {
 	}
 
 	errorEvent(arg) {
-		if (this.htmlElement.parentElement.previousElementSibling && this.htmlElement.parentElement.previousElementSibling.classList.contains('authorization__error')) {
-			this.htmlElement.parentElement.previousElementSibling.remove();
+		if (this.htmlElement.parentElement.lastElementChild.classList.contains('authorization__error')) {
+			this.htmlElement.parentElement.lastElementChild.remove();
 		}
+		this.htmlElement.classList.remove('error');
 		if (this.hasError) {
 			this.htmlElement.parentElement.insertAdjacentHTML(
-				"beforebegin",
-				`<div class="authorization__error">${this.errorMessage}</div>`
+				"beforeend",
+				`<span class="authorization__error">${this.errorMessage}</span>`
 			);
-			this.htmlElement.style.border = '0.1rem solid red';
+			this.htmlElement.classList.add('error');
 			arg();
 		}
 		this.htmlElement.addEventListener("focus", function(e) {
-			this.style.border = 'none';
+			//this.style.border = 'none';
 		});
 		return this;
 	}
@@ -159,7 +159,7 @@ registerForm.addEventListener("submit", function (e) {
 
 
 	function dontSubmit() {
-		e.preventDefault()
+		e.preventDefault();
 		kostilDlyaSwapToLogin = false;
 	}
 	//location.href='home.html'

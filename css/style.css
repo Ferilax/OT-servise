@@ -344,84 +344,52 @@ html {
   aspect-ratio: 39/24;
 }
 
-.modal-for-company {
-  position: absolute;
-  z-index: 100;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
+.input-container {
+  height: 4.8rem;
+  position: relative;
 }
-.modal-for-company__body {
-  width: 65.6rem;
-  border: 1px solid #000;
-  border-radius: 1.2rem;
-  overflow: hidden;
-}
-.modal-for-company__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 7.2rem;
-  border-bottom: 0.1rem solid #000;
-  padding: 0 2.4rem;
-  margin-bottom: 4rem;
-}
-.modal-for-company__close {
-  cursor: pointer;
-  width: 3.4rem;
-  height: 3.4rem;
-  padding: 0.5rem;
-  transform: translateX(0.5rem);
-}
-.modal-for-company__close img {
+.input-container input {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.modal-for-company__main {
-  text-align: center;
-  padding: 0 2.4rem;
-}
-.modal-for-company__title {
-  margin-bottom: 2.4rem;
-}
-.modal-for-company__button {
-  width: 29.2rem;
-  height: 4rem;
-  margin: auto;
-  margin-bottom: 1.6rem;
-}
-.modal-for-company__info {
-  font-size: 1.4rem;
-  margin-bottom: 2.4rem;
-}
-.modal-for-company__input-container {
-  margin-bottom: 2rem;
-}
-.modal-for-company__input-container input {
-  width: 29.2rem;
-  height: 4.8rem;
-  border: 1px solid #000;
-  padding: 0 1.4rem;
-  border: 0.4rem;
   background: #F5F6FA;
+  border-radius: 0.4rem;
+  padding: 2rem 0 0.8rem 1.6rem;
+  transition: background 0.2s;
 }
-.modal-for-company__input-container input::-moz-placeholder {
+.input-container input:hover {
+  background: #EFF1F8;
+}
+.input-container input:focus {
+  background: #EFF1F8;
+  border-bottom: 0.2rem solid #00B856;
+}
+.input-container input:disabled {
+  background: #F5F6FA;
+  color: #D7DCED;
+}
+.input-container input:disabled + .placeholder {
+  color: #D7DCED;
+}
+.input-container input.error {
+  border-bottom: 0.2rem solid #E24826;
+}
+.input-container div {
+  position: absolute;
+  left: 1.6rem;
+  top: 50%;
+  transform: translateY(-50%);
   color: #8D96A5;
+  transition: 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
-.modal-for-company__input-container input:-ms-input-placeholder {
-  color: #8D96A5;
-}
-.modal-for-company__input-container input::placeholder {
-  color: #8D96A5;
-}
-.modal-for-company__submit-button {
-  width: 14rem;
-  height: 4rem;
-  margin: auto;
-  margin-bottom: 2.4rem;
+.input-container div.active {
+  top: 0.4rem;
+  transform: none;
+  font-size: 1.2rem;
 }
 
 .main-authorization {
@@ -436,13 +404,15 @@ html {
 }
 .start-page__row {
   display: flex;
+  justify-content: space-between;
 }
-.start-page__row > section {
-  flex: 0 1 50%;
+.start-page .container {
+  max-width: 169rem;
+  padding: 0 2rem;
 }
 
 .authorization {
-  padding: 9rem 0 0 15.5rem;
+  padding-top: 9rem;
 }
 .authorization__logo {
   width: 35rem;
@@ -476,7 +446,7 @@ html {
   margin-bottom: 2.5rem;
 }
 .authorization__buttons > div.active {
-  font-size: 30px;
+  font-size: 3rem;
   color: #373737;
 }
 .authorization__login {
@@ -504,7 +474,7 @@ html {
   margin-bottom: 4rem;
 }
 .authorization__input-password, .authorization__input-FIO, .authorization__input-email {
-  width: 60rem;
+  width: 60.8rem;
   height: 5rem;
   position: relative;
 }
@@ -529,41 +499,16 @@ html {
 .authorization__PO {
   font-size: 1.4rem;
 }
-.authorization input {
-  width: 100%;
-  height: 100%;
-  background: #F5F6FA;
-  border-radius: 0.4rem;
-  padding: 2rem 0 0.8rem 1.6rem;
-  position: relative;
-}
-.authorization__placeholder {
-  position: absolute;
-  left: 1.6rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #8D96A5;
-  transition: 0.2s;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
-}
-.authorization__placeholder.active {
-  top: 0.4rem;
-  transform: none;
-  font-size: 1.2rem;
-}
 .authorization__error {
-  font-size: 1.7rem;
-  color: red;
-  margin-bottom: 0.5rem;
-  width: 60rem;
+  font-size: 1.4rem;
+  color: #E24826;
+  position: absolute;
+  bottom: -1.7rem;
+  left: 1.6rem;
 }
 
 .tariff {
-  padding: 12rem 0rem 0;
+  padding-top: 12rem;
 }
 .tariff__body {
   width: 75rem;
@@ -630,8 +575,12 @@ html {
 .tariff__grid > div:nth-child(6n+9), .tariff__grid > div:nth-child(6n+8), .tariff__grid > div:nth-child(6n+7) {
   background: #EFF1F8;
 }
-.tariff__costil-time {
+.tariff__grid > div:nth-child(3n+2) {
   padding-right: 1.8rem;
+}
+.tariff__grid > div:nth-child(3n+4) {
+  justify-content: flex-start;
+  padding-left: 1.6rem;
 }
 .header-home {
   position: fixed;
@@ -924,6 +873,7 @@ html {
 .user-tariff__name {
   font-weight: 900;
   font-size: 4.8rem;
+  font-size: calc(20px + 28 * ((100vw - 320px) / 1600));
   margin-bottom: 1.3rem;
 }
 .user-tariff__time {
@@ -1240,18 +1190,22 @@ html {
 .profile__title {
   margin-bottom: 3rem;
 }
-.personal-settings .profile__item-body {
+.personal-settings__body {
   display: flex;
   flex-direction: column;
   align-self: stretch;
+  height: 43.6rem;
 }
-.personal-settings .profile__item-body .personal-settings__info, .personal-settings .profile__item-body .personal-settings__avatar, .personal-settings .profile__item-body #changePersonalData {
-  display: none;
+.personal-settings__body .personal-settings__info, .personal-settings__body .personal-settings__avatar, .personal-settings__body #changePersonalData {
+  display: block;
 }
 .personal-settings__body.active {
-  aspect-ratio: 390/436;
+  height: auto;
 }
 .personal-settings__body.active .personal-settings__info, .personal-settings__body.active .personal-settings__avatar, .personal-settings__body.active #changePersonalData {
+  display: none;
+}
+.personal-settings__body.active .personal-settings__form-container {
   display: block;
 }
 .personal-settings__input-avatar {
@@ -1323,9 +1277,6 @@ html {
   height: 100%;
   display: none;
 }
-.personal-settings__form-container.active {
-  display: block;
-}
 .personal-settings__form {
   height: 100%;
   display: flex;
@@ -1351,12 +1302,15 @@ html {
 .password-settings__body {
   display: flex;
   flex-direction: column;
-  aspect-ratio: 390/436;
+  height: 43.6rem;
 }
 .password-settings__body .password-settings__info, .password-settings__body #changePassword {
-  display: none;
+  display: block;
 }
 .password-settings__body.active .password-settings__info, .password-settings__body.active #changePassword {
+  display: none;
+}
+.password-settings__body.active .password-settings__form-container {
   display: block;
 }
 .password-settings__title {
@@ -1377,30 +1331,32 @@ html {
   height: 100%;
   display: none;
 }
-.password-settings__form-container.active {
-  display: block;
-}
 .password-settings__form {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+.password-settings__form > * {
+  flex: 0 0 auto;
 }
 .password-settings__input-container {
   margin-bottom: 2.4rem;
 }
 .password-settings__input-container input {
   width: 100%;
-  height: 4.8rem;
   padding: 0 1.6rem;
   background: #F5F6FA;
   border-radius: 0.4rem;
 }
 .password-settings__input-container_1 {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
+}
+.password-settings__input-container_1 input {
+  height: 4.8rem;
 }
 
 .company-settings .profile__item-body {
-  aspect-ratio: 804/436;
+  height: 43.6rem;
   padding: 0rem;
 }
 .company-settings .profile__item-body-body {
@@ -1464,6 +1420,7 @@ html {
 }
 .company-settings__icon {
   cursor: pointer;
+  border: 1px solid #000;
   width: 4rem;
   height: 4rem;
   padding: 1rem;
@@ -1556,6 +1513,12 @@ html {
   color: #8D96A5;
   position: relative;
 }
+.specialist-settings__select-container.active .specialist-settings__ul {
+  display: block;
+}
+.specialist-settings__select-container.active .specialist-settings__button::after {
+  transform: translate(0, -50%) rotate(180deg);
+}
 .specialist-settings__items {
   align-items: center;
   -webkit-user-select: none;
@@ -1621,17 +1584,11 @@ html {
   background: url("../../img/profile/chevron-down.svg") 50%/100% no-repeat;
   pointer-events: none;
 }
-.specialist-settings__button.active::after {
-  transform: translate(0, -50%) rotate(180deg);
-}
 .specialist-settings__ul {
   position: absolute;
   width: 100%;
   cursor: pointer;
   display: none;
-}
-.specialist-settings__ul.active {
-  display: block;
 }
 .specialist-settings__li {
   border: 0.1rem solid #8D96A5;
@@ -1687,4 +1644,89 @@ html {
 }
 .specialist-settings__a {
   display: inline-block;
+}
+
+.modal-for-company {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+}
+.modal-for-company__body {
+  width: 65.6rem;
+  border: 1px solid #000;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+.modal-for-company__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 7.2rem;
+  border-bottom: 0.1rem solid #000;
+  padding: 0 2.4rem;
+  margin-bottom: 4rem;
+}
+.modal-for-company__close {
+  cursor: pointer;
+  width: 3.4rem;
+  height: 3.4rem;
+  padding: 0.5rem;
+  transform: translateX(0.5rem);
+}
+.modal-for-company__close img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.modal-for-company__main {
+  text-align: center;
+  padding: 0 2.4rem;
+}
+.modal-for-company__title {
+  margin-bottom: 2.4rem;
+}
+.modal-for-company__button {
+  width: 29.2rem;
+  height: 4rem;
+  margin: auto;
+  margin-bottom: 1.6rem;
+}
+.modal-for-company__info {
+  font-size: 1.4rem;
+  margin-bottom: 2.4rem;
+}
+.modal-for-company__input-container {
+  margin-bottom: 2rem;
+}
+.modal-for-company__input-container input {
+  width: 29.2rem;
+  height: 4.8rem;
+  border: 1px solid #000;
+  padding: 0 1.4rem;
+  border: 0.4rem;
+  background: #F5F6FA;
+}
+.modal-for-company__input-container input::-moz-placeholder {
+  color: #8D96A5;
+}
+.modal-for-company__input-container input:-ms-input-placeholder {
+  color: #8D96A5;
+}
+.modal-for-company__input-container input::placeholder {
+  color: #8D96A5;
+}
+.modal-for-company__submit-button {
+  width: 14rem;
+  height: 4rem;
+  margin: auto;
+  margin-bottom: 2.4rem;
+}
+
+.modal-for-company.active {
+  display: block;
 }

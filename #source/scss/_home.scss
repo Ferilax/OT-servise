@@ -149,7 +149,9 @@
 
 	&__name {
 		font-weight: 900;
+
 		font-size: 4.8rem;
+		@include adaptiv-font(48, 20);
 		margin-bottom: 1.3rem;
 	}
 

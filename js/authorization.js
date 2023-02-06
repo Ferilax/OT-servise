@@ -17,7 +17,6 @@ new Swiper('.swiper1', {
 const loginForm = document.forms.login,
 		registerForm = document.forms.register,
 		sectionAuthorization = document.querySelector('.authorization'),
-		allInputContainers = sectionAuthorization.querySelectorAll('.input-container'),
 		loginButton = sectionAuthorization.querySelector('.authorization__login'),
 		registerButton = sectionAuthorization.querySelector('.authorization__register'),
 		inputPasswordL = loginForm.password,
@@ -25,22 +24,6 @@ const loginForm = document.forms.login,
 		inputEmailL = loginForm.email,
 		inputEmailR = registerForm.email,
 		inputFioR = registerForm.fio
-
-
-allInputContainers.forEach(element => {
-	let input = element.querySelector('input');
-	let placeholder = element.querySelector('.authorization__placeholder');
-
-	input.addEventListener('focus', function (e) {
-		placeholder.classList.add('active');
-	});
-
-	input.addEventListener('blur', function (e) {
-		if (!input.value) {
-			placeholder.classList.remove('active');
-		}
-	});
-})
 
 registerForm.style.display = 'none';
 document.addEventListener("click", function(e) {

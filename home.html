@@ -174,19 +174,14 @@
 											</div>
 											<div class="user-profile__name h2">Иванов Иван Иванович</div>
 											<div class="user-profile__status">Директор</div>
-											<div class="user-profile__select-container">
-												<!-- <select name="" id="" class="user-profile__select">
-													<option value="" class="user-profile__option" selected>Aleskeroff.ru</option>
-													<option value="" class="user-profile__option">СК Звезда ООО</option>
-													<option value="" class="user-profile__option">Лифтстройуправление ООО</option>
-												</select> -->
-												<button class="user-profile__button">Aleskeroff.ru</button>
-												<ul class="user-profile__ul">
-													<li class="user-profile__li active" data-value="1">Aleskeroff.ru</li>
-													<li class="user-profile__li" data-value="2">СК Звезда ООО</li>
-													<li class="user-profile__li" data-value="3">Лифтстройуправление ООО</li>
+											<div class="user-profile__select-container select">
+												<button class="user-profile__button select__button"><span class="select__span">Aleskeroff.ru</span></button>
+												<ul class="user-profile__ul select__ul">
+													<li class="user-profile__li active select__li" data-value="1">Aleskeroff.ru</li>
+													<li class="user-profile__li select__li" data-value="2">СК Звезда ООО</li>
+													<li class="user-profile__li select__li" data-value="3">Лифтстройуправление ООО</li>
 												</ul>
-												<input class="user-profile__input" type="text" value="1">
+												<input class="user-profile__input select__input" type="text" value="1">
 											</div>
 										</div>
 									</div>
@@ -379,6 +374,7 @@
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<script src="js/pseudoSelect.js"></script>
 		<script src="js/home.js"></script>
 		<script src="js/global.js"></script>
 	</body>

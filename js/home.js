@@ -28,13 +28,11 @@ document.addEventListener("click", function(e) {
 	if (!e.target.closest('.header-user')) {
 		downDropList.classList.remove('active');
 	}
-	if (!e.target.closest('.user-profile__ul') && !e.target.closest('.user-profile__button')) {
-		userCompanySelectUl.classList.remove('active');
-	}
 });
 
 
 //! Искусственный select>option
+/*
 const userCompanySelectContainer = document.querySelector('.user-profile__select-container');
 const userCompanySelectBtn = document.querySelector('.user-profile__button');
 const userCompanySelectUl = document.querySelector('.user-profile__ul');
@@ -57,5 +55,5 @@ userCompanySelectLi.forEach(el => {
 		this.classList.add('active');
 	});
 });
-
+*/
 

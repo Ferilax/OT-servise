@@ -201,12 +201,13 @@ html {
 }
 
 .input-container {
-	height: 4.8rem;
+	//height: 4.8rem;
 	position: relative;
 
 	input {
 		width: 100%;
 		height: 100%;
+		height: 4.8rem;
 		background: $whiteF5;
 		border-radius: 0.4rem;
 		padding: 2rem 0 0.8rem 1.6rem;
@@ -250,10 +251,142 @@ html {
 }
 
 .click-icon {
+	//* Only for 20px icon
 	cursor: pointer;
 	width: 4rem;
 	height: 4rem;
 	padding: 1rem;
 	transform: translate(1rem, 0);
 	@include img(contain);
+}
+
+.default-select {
+	position: relative;
+
+	.select__button {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 4.8rem;
+		background-color: $whiteF5;
+		border-radius: 0.4rem;
+		padding: 2rem 0 0.8rem 1.6rem;
+		text-align: left;
+		color: $gray8D;
+
+		span {
+			color: $grayDark37;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0.8rem;
+			top: 50%;
+			transform: translate(0, -50%);
+			width: 2.4rem;
+			height: 2.4rem;
+			background: url('../img/all/grayArrowDown.svg') 50%/100% no-repeat;
+			pointer-events: none;
+		}
+
+		&:hover {
+			background: $whiteEF;
+
+			&::after {
+				background-image: url('../img/all/blackArrowDown.svg');
+			}
+		}
+
+		&:disabled {
+			background: $whiteF5;
+			color: $whiteD7;
+		}
+
+		&:disabled+.placeholder {
+			color: $whiteD7;
+		}
+
+		div {
+			position: absolute;
+			left: 1.6rem;
+			top: 50%;
+			transform: translateY(-50%);
+			color: $gray8D;
+			user-select: none;
+			pointer-events: none;
+		}
+
+		div.active {
+			top: 0.4rem;
+			transform: none;
+			font-size: 1.2rem;
+		}
+	}
+
+
+	.select__ul {
+		cursor: pointer;
+		height: 19.1rem;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		background: $whiteF5;
+		text-align-last: left;
+
+		&::-webkit-scrollbar {
+			width: 0.4rem;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius: 0.7rem;
+			background-color: $green;
+		}
+	}
+
+	.select__ul-container {
+		position: absolute;
+		width: 100%;
+		top: calc(100% + 1.2rem);
+		display: none;
+		border-radius: 0.4rem;
+		overflow: hidden;
+	}
+
+	.select__li {
+		height: 4.8rem;
+		padding: 0 1.6rem;
+		display: flex;
+		align-items: center;
+		color: $gray8D;
+
+		&:hover {
+			color: $grayDark37;
+			background-color: $whiteEF;
+		}
+	}
+
+	.select__li.active {
+		color: $grayDark37;
+		background-color: $whiteEF;
+	}
+
+	.select__input {
+		display: none;
+	}
+}
+
+.default-select.active {
+
+	.select__ul-container {
+		display: block;
+	}
+
+	.select__button {
+		background: $whiteEF;
+		border-bottom: 0.2rem solid $green;
+
+		&::after {
+			background-image: url('../img/all/blackArrowUp.svg');
+		}
+	}
 }

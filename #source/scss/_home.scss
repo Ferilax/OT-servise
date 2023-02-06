@@ -70,6 +70,16 @@
 	&__select-container {
 		position: relative;
 	}
+	&__select-container.active {
+		.select__ul {
+			display: block;
+		}
+		.select__button {
+			&::after {
+				transform: translate(0, -50%) rotate(180deg);
+			}
+		}
+	}
 
 	&__button {
 		display: block;
@@ -105,9 +115,6 @@
 		border-radius: 1rem;
 		font-size: 1.8rem;
 		display: none;
-	}
-	&__ul.active {
-		display: block;
 	}
 
 	&__li {

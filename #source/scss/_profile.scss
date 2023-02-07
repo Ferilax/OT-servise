@@ -324,7 +324,7 @@
 
 	&__body {
 		border: 0.1rem solid $whiteEF;
-		overflow: hidden;
+		//overflow: hidden;
 		box-shadow: 0px 0px 0.4rem rgba(223, 227, 243, 0.7);
 		border-radius: 1.2rem;
 	}
@@ -663,3 +663,5 @@
 .modal-for-edit.active {
 	display: block;
 }
+
+//* ---------------------------------------------------------------------------------------- *//

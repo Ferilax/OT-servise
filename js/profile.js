@@ -1,9 +1,5 @@
 "use strict";
 
-const downDropList = document.querySelector('.header-user');
-const downDropListHidden = document.querySelector('.header-user__hidden');
-const downDropListVisible = document.querySelector('.header-user__visible');
-
 const sectionPersonal = document.querySelector('.personal-settings');
 const sectionPersonalPlaceholders = document.querySelectorAll('.placeholder');
 const personalSettingsFormContainer = sectionPersonal.querySelector('.personal-settings__form-container');
@@ -27,23 +23,18 @@ const passwordSettingsTitle = sectionPassword.querySelector('.password-settings_
 const sectionCompany = document.querySelector('.company-settings');
 const companySettingsItems = Array.from(document.querySelectorAll('.company-settings__item'));
 
+const sectionSpecialist = document.querySelector('.specialist-settings');
+
 const deleteModalCompany = document.querySelector('.modal-for-delete');
 const deleteModalCompanySubmit = document.querySelector('.modal-for-delete__submit-button');
 const editModalCompany = document.querySelector('.modal-for-edit');
 const editModalCompanySubmit = document.querySelector('.modal-for-edit__submit-button');
-let modalCounter;
+let modalCounter; //? 
 let userAvatarBefore = userAvatar.src;
 let textForFckingSpan = ''; //? Эта переменная нужна, чтобы при отведении курсора от option (li), в selection (button) текст не менялся на наведенный option (li)
 
 //! Общие проверки
 document.addEventListener("click", function (e) {
-	//* Выпадашка *//
-	if (e.target.closest('.header-user__visible')) {
-		downDropList.classList.toggle('active');
-	}
-	if (!e.target.closest('.header-user')) {
-		downDropList.classList.remove('active');
-	}
 	//* Модалка *//
 	if (e.target.closest('.modal-for-delete__close')) {
 		deleteModalCompany.classList.remove('active');
@@ -121,3 +112,12 @@ editModalCompanySubmit.addEventListener("click", function(e) {
 	//хз че писать
 });
 
+//! Удаление сотрудника
+sectionSpecialist.addEventListener("click", function(e) {
+	let clickedDeleteButton = e.target.closest('.specialist-settings__delete');
+	let list = e.target.closest('.specialist-settings__item');
+	
+	if (clickedDeleteButton) {
+		list.remove();
+	}
+});

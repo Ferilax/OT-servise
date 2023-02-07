@@ -17,43 +17,18 @@ new Swiper('.swiper1', {
 	},
 });
 
-const downDropList = document.querySelector('.header-user');
-const downDropListHidden = document.querySelector('.header-user__hidden');
-const downDropListVisible = document.querySelector('.header-user__visible');
 
-document.addEventListener("click", function(e) {
-	if (e.target.closest('.header-user__visible')) {
-		downDropList.classList.toggle('active');
-	}
-	if (!e.target.closest('.header-user')) {
-		downDropList.classList.remove('active');
-	}
-});
+const newsItems = document.querySelector('.pre-news__items')
+console.log(newsItems)
 
+let newsItem1 = new CreateBlock('#Электричество, #Строительство', 'Официально открыт корпоративный портал нашей компании', '19.07.2020', 'Сегодня официально заработал корпоративный портал нашей компании...', 'img/Home/main/news.png');
+newsItem1.addElement(newsItems);
 
-//! Искусственный select>option
-/*
-const userCompanySelectContainer = document.querySelector('.user-profile__select-container');
-const userCompanySelectBtn = document.querySelector('.user-profile__button');
-const userCompanySelectUl = document.querySelector('.user-profile__ul');
-const userCompanySelectLi = document.querySelectorAll('.user-profile__li');
-const userCompanySelectInput = document.querySelectorAll('.user-profile__input');
+let newsItem2 = new CreateBlock('#Электричество, #Строительство', 'Официально открыт корпоративный портал нашей компании', '19.07.2020', 'Сегодня официально заработал корпоративный портал нашей компании...', 'img/Home/main/news.png');
+newsItem2.addElement(newsItems);
 
-userCompanySelectBtn.addEventListener("click", function(e) {
-	userCompanySelectUl.classList.toggle('active');
-});
+let newsItem3 = new CreateBlock('#Электричество, #Строительство', 'Официально открыт корпоративный портал нашей компании', '19.07.2020', 'Сегодня официально заработал корпоративный портал нашей компании...', 'img/Home/main/news.png');
+newsItem3.addElement(newsItems);
 
-userCompanySelectLi.forEach(el => {
-	el.addEventListener("click", function(e) {
-		userCompanySelectUl.classList.remove('active');
-		userCompanySelectBtn.innerText = this.innerText;
-		userCompanySelectInput.value = this.dataset.value;
-		console.log(userCompanySelectInput.value);
-		userCompanySelectLi.forEach(el => {
-			el.classList.remove('active')
-		});
-		this.classList.add('active');
-	});
-});
-*/
-
+let newsItem4 = new CreateBlock('#Электричество, #Строительство', 'Официально открыт корпоративный портал нашей компании', '19.07.2020', 'Сегодня официально заработал корпоративный портал нашей компании...', 'img/Home/main/news.png');
+newsItem4.addElement(newsItems);

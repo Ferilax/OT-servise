@@ -1,0 +1,39 @@
+//* ---------------------------------------------------------------------------------------- *//
+.news {
+
+	&__path {
+		margin-bottom: 1.6rem;
+	}
+
+	&__title {
+		margin-bottom: 1.6rem;
+	}
+	
+	&__tags {
+		display: flex;
+		margin-bottom: 2.4rem;
+	}
+	
+	&__tag {
+		cursor: pointer;
+		font-size: 1.4rem;
+		margin-right: 1.2rem;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__tag.selected {
+		color: $green;
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -1rem;
+
+		.post {
+			margin-bottom: 2.4rem;
+			flex: 0 1 25%;
+		}
+	}
+}

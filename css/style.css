@@ -153,7 +153,7 @@ html, body {
   font-weight: normal;
   font-style: normal;
 }
-.swiper1 .swiper-btn-next, .swiper1 .swiper-btn-prev, .user-tariff__button, .tariff__grid > div:nth-child(n+4), .tariff__buy, .authorization__button button, .post__type, .button-2, .button {
+.detailed-new__prev-button, .detailed-new__next-button, .swiper1 .swiper-btn-next, .swiper1 .swiper-btn-prev, .user-tariff__button, .tariff__grid > div:nth-child(n+4), .tariff__buy, .authorization__button button, .post__type, .button-2, .button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,7 +218,7 @@ html {
   height: 4rem;
   margin-right: 3.2rem;
 }
-.footer__visionzero img {
+.footer__visionzero img, .footer__visionzero svg {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -242,6 +242,7 @@ html {
 .title {
   font-size: 3rem;
   font-weight: 600;
+  color: #373737;
 }
 
 .h2 {
@@ -295,7 +296,7 @@ html {
   display: block;
   position: relative;
 }
-.post__preview img {
+.post__preview img, .post__preview svg {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -399,7 +400,7 @@ html {
   padding: 1rem;
   transform: translate(1rem, 0);
 }
-.click-icon img {
+.click-icon img, .click-icon svg {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -568,7 +569,7 @@ html {
   margin: 0 0 5.8rem;
   display: inline-block;
 }
-.authorization__logo img {
+.authorization__logo img, .authorization__logo svg {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -737,7 +738,7 @@ html {
   background: white;
   border-bottom: 0.1rem solid #EFF1F8;
 }
-.header-home img {
+.header-home img, .header-home svg {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -877,13 +878,16 @@ html {
   opacity: 0;
   transition: 0.2s;
 }
-.aside__li:hover::after {
-  opacity: 1;
+.aside__li:hover span {
+  color: #00B856;
 }
-.aside__li:hover {
+.aside__li.active {
   background: #EFF1F8;
 }
-.aside__li:hover span {
+.aside__li.active::after {
+  opacity: 1;
+}
+.aside__li.active span {
   color: #00B856;
 }
 .aside__a {
@@ -1048,7 +1052,7 @@ html {
   height: 4rem;
   margin: 5.3rem auto 0.6rem;
 }
-.user-test__img img {
+.user-test__img img, .user-test__img svg {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -1155,7 +1159,7 @@ html {
   display: inline-block;
   vertical-align: middle;
 }
-.alerts__item-icon img {
+.alerts__item-icon img, .alerts__item-icon svg {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -1233,7 +1237,7 @@ html {
 .swiper1 .swiper-slide {
   border-radius: 1.2rem;
 }
-.swiper1 .swiper-slide img {
+.swiper1 .swiper-slide img, .swiper1 .swiper-slide svg {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1365,7 +1369,7 @@ html {
   position: relative;
   margin-bottom: 2.4rem;
 }
-.personal-settings__input-avatar img {
+.personal-settings__input-avatar img, .personal-settings__input-avatar svg {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1403,7 +1407,7 @@ html {
   height: 14rem;
   margin-bottom: 2.4rem;
 }
-.personal-settings__avatar img {
+.personal-settings__avatar img, .personal-settings__avatar svg {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1785,7 +1789,7 @@ html {
   padding: 0.5rem;
   transform: translateX(0.5rem);
 }
-.modal-for-delete__close img {
+.modal-for-delete__close img, .modal-for-delete__close svg {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -1851,7 +1855,7 @@ html {
   padding: 0.5rem;
   transform: translateX(0.5rem);
 }
-.modal-for-edit__close img {
+.modal-for-edit__close img, .modal-for-edit__close svg {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -1905,4 +1909,132 @@ html {
 .news__items .post {
   margin-bottom: 2.4rem;
   flex: 0 1 25%;
+}
+
+.detailed-news__path {
+  margin-bottom: 1.6rem;
+}
+.detailed-news__title {
+  margin-bottom: 3rem;
+}
+.detailed-news__title a {
+  padding-left: 3.2rem;
+  position: relative;
+}
+.detailed-news__title a::after {
+  content: "";
+  position: absolute;
+  width: 2.4rem;
+  height: 3.8rem;
+  background: url("../../img/News/arrowLeft.svg") 50%/contain no-repeat;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+.detailed-new {
+  display: flex;
+}
+.detailed-new__left {
+  padding-right: 1.2rem;
+  flex: 0 0 81.6rem;
+}
+.detailed-new__right {
+  padding-left: 1.2rem;
+  flex: 1 1 auto;
+}
+.detailed-new__title {
+  margin-bottom: 0.8rem;
+}
+.detailed-new__date {
+  margin-bottom: 0.8rem;
+}
+.detailed-new__tags {
+  margin-bottom: 0.8rem;
+  color: #8D96A5;
+  display: flex;
+  font-size: 1.4rem;
+}
+.detailed-new__tags > div:first-child {
+  margin-right: 1.2rem;
+}
+.detailed-new__text {
+  margin-top: -2rem;
+  line-height: 2rem;
+  white-space: pre-line;
+}
+.detailed-new__ul {
+  line-height: 2rem;
+}
+.detailed-new__slider {
+  position: relative;
+}
+.detailed-new__slider img, .detailed-new__slider svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.detailed-new__slide {
+  height: 46.2rem;
+  display: none;
+  margin-bottom: 2.4rem;
+}
+.detailed-new__slide img {
+  border-radius: 0.6rem;
+}
+.detailed-new__slide.active {
+  display: block;
+}
+.detailed-new__slider-minimap {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.detailed-new__slider-minimap img, .detailed-new__slider-minimap svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.detailed-new__slider-minimap img {
+  border-radius: 0.6rem;
+}
+.detailed-new__slider-minimap::-webkit-scrollbar {
+  display: none;
+}
+.detailed-new__slide-mini {
+  flex: 0 0 25.2rem;
+  height: 14.5rem;
+  margin-right: 2.4rem;
+}
+.detailed-new__slide-mini:last-child {
+  margin-right: 0;
+}
+.detailed-new__prev-button, .detailed-new__next-button {
+  cursor: pointer;
+  position: absolute;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  background: #FFFFFF;
+  z-index: 110;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.detailed-new__prev-button img, .detailed-new__next-button img {
+  width: 0.8rem;
+  height: 1.4rem;
+}
+.detailed-new__prev-button {
+  left: 1.6rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.detailed-new__next-button {
+  right: 1.6rem;
+  top: 50%;
+  transform: translate(0, -50%);
 }

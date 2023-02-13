@@ -1,12 +1,13 @@
 class CreateBlock {
 	postType = 2;
 
-	constructor(hashtags, title, date, text, imgSrc) {
+	constructor(hashtags, title, date, text, imgSrc, link) {
 		this.hashtags = hashtags;
 		this.title = title;
 		this.date = date;
 		this.text = text;
 		this.imgSrc = imgSrc;
+		this.link = link;
 	}
 
 	addPostTavAndTeacher(postTab, teachersType, teachers) {
@@ -22,7 +23,7 @@ class CreateBlock {
 			"beforeend",
 			`<div class="post post-type-${this.postType}">
 				<div class="post-body">
-					<a href="#" class="post__preview">
+					<a href="${this.link || '#'}" class="post__preview">
 						<img src="${this.imgSrc}" alt="">
 						${this.postType == 2 ? "" : `<div class="post__type">${this.postTab}</div>`}
 					</a>

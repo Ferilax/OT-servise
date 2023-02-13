@@ -171,13 +171,22 @@
 		}
 		transition: 0.2s;
 		&:hover::after {
-			opacity: 1;
+			//opacity: 1;
 		}
 		&:hover {
 			span {
 				color: $green;
 			}
-			background: #EFF1F8;
+			//background: #EFF1F8;
+		}
+	}
+	&__li.active {
+		&::after {
+			opacity: 1;
+		}
+		background: #EFF1F8;
+		span {
+			color: $green;
 		}
 	}
 

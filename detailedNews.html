@@ -8,6 +8,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width" />
 </head>
+
 <body>
 	<div class="wrapper">
 		<header class="header-home">
@@ -89,7 +90,7 @@
 				</div>
 			</div>
 		</header>
-		
+
 		<aside class="aside">
 			<div class="container">
 				<nav class="aside__body">
@@ -158,20 +159,74 @@
 				</nav>
 			</div>
 		</aside>
-		
+
 		<main class="main">
 			<div class="main-body">
-				<article class="news">
+				<article class="detailed-news">
 					<div class="container">
-						<div class="news__path path">Главная / Новости</div>
-						<h1 class="news__title title">Новости</h1>
-						<div class="news__tags">
-							<div class="news__tag selected">Все новости</div>
-							<div class="news__tag">#Новости компании</div>
-							<div class="news__tag">#Бизнес</div>
-							<div class="news__tag">#Новый год</div>
-						</div>
-						<div class="news__items"></div>
+						<div class="detailed-news__path path">Главная / Новости / Новость</div>
+						<h1 class="detailed-news__title"><a href="news.html" class="title">Новость</a></h1>
+						<section class="detailed-new">
+							<div class="detailed-new__left">
+								<div class="detailed-new__grid">
+									<div class="detailed-new__slider">
+										<div class="detailed-new__slide">
+											<img src="img/Home/main/action2.png" alt="">
+										</div>
+										<div class="detailed-new__slide">
+											<img src="img/Home/main/action3.png" alt="">
+										</div>
+										<div class="detailed-new__slide">
+											<img src="img/Home/main/news.png" alt="">
+										</div>
+										<div class="detailed-new__slide">
+											<img src="img/Home/main/action1.png" alt="">
+										</div>
+										<div class="detailed-new__prev-button"><img src="img/Home/main/swiper-prev.svg" alt=""></div>
+										<div class="detailed-new__next-button"><img src="img/Home/main/swiper-next.svg" alt=""></div>
+									</div>
+									<div class="detailed-new__slider-minimap">
+										<div class="detailed-new__slide-mini">
+											<img src="img/Home/main/action2.png" alt="">
+										</div>
+										<div class="detailed-new__slide-mini">
+											<img src="img/Home/main/action3.png" alt="">
+										</div>
+										<div class="detailed-new__slide-mini">
+											<img src="img/Home/main/news.png" alt="">
+										</div>
+										<div class="detailed-new__slide-mini">
+											<img src="img/Home/main/news.png" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="detailed-new__right">
+								<div class="detailed-new__body">
+									<h2 class="detailed-new__title title">Обучение по охране труда</h2>
+									<div class="detailed-new__date">19.07.2011</div>
+									<div class="detailed-new__tags">
+										<div class="detailed-new__tag">#Электричество</div>
+										<div class="detailed-new__tag">#Строительство</div>
+									</div>
+									<p class="detailed-new__text">
+										Нет программ обучения, значит обучение не проводили. Работодатель не представил ГИТ программы обученияи экзаменационные билеты для проверки знаний, поэтому инспекция посчитала, что обучение работодатель не проводил. Работодатель пытался доказать, что это не так, и представил в доказательство приказ о комиссии по проверке знаний требований охраны труда и протоколы о периодической проверке знаний. Суд посчитал, что инспекция права, и работодатель не обучил работников охране труда (определение Нижегородского областного суда от 14.03.2017 по делу № 33-2956/2017).
+										
+										Нарушения, которые докажут, что работодатель не проводил обучение. Суд подтвердил, что работодатель нарушает правила обучения по охране труда, если:
+										
+										• в журнале регистрации вводного инструктажа нет подписи инструктирующего либо не заполнена графа «Год рождения»;
+										• после первичного инструктажа на рабочем месте водители не направлены на стажировку;
+										• не заполнена графа «Стажировка на рабочем месте» в журнале регистрации инструктажа на рабочем месте;
+										• не согласованы программы проведения вводного инструктажа с профсоюзом;
+										• первичный инструктаж на рабочем месте проводит специалист по охране труда;
+										• специалист по охране труда прошел повышение квалификации в учебном заведении без аккредитации;
+										• не обучен по охране труда член комиссии по проверке знаний.
+										
+										Такие нарушения указал Верховный суд Республики Крым в решении от 16.11.2016 № 21-635/2016.
+									</p>
+								</div>
+							</div>
+						</section>
 					</div>
 				</article>
 
@@ -193,10 +248,11 @@
 		</main>
 	</div>
 
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/ibg.js"></script>
 	<script src="js/constructor1.js"></script>
-	<script src="js/news.js"></script>
 	<script src="js/header.js"></script>
+	<script src="js/detailedNews.js"></script>
 </body>
 
 </html>

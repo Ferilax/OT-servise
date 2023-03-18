@@ -1,7 +1,4 @@
 .detailed-news {
-	&__path {
-		margin-bottom: 1.6rem;
-	}
 
 	&__title {
 		margin-bottom: 3rem;
@@ -24,6 +21,7 @@
 }
 
 .detailed-new {
+	margin-bottom: 6.5rem;
 	display: flex;
 	&__left {
 		padding-right: 1.2rem;
@@ -138,5 +136,22 @@
 		right: 1.6rem;
 		top: 50%;
 		transform: translate(0, -50%);
+	}
+}
+
+.more-news {
+
+	&__title {
+		margin-bottom: 1.6rem;
+	}
+	
+	&__items {
+		margin: 0 -1rem;
+		display: flex;
+		flex-wrap: wrap;
+		.post {
+			margin-bottom: 2rem;
+			flex: 0 1 25%;
+		}
 	}
 }

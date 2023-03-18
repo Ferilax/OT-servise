@@ -26,8 +26,18 @@
 		height: 100%;
 		object-fit: $objFit;
 	}
-
-
+}
+@mixin click-icon ($rem) {
+	img, svg {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+	cursor: pointer;
+	width: calc($rem + $rem / 2);
+	height: calc($rem + $rem / 2);
+	padding: calc($rem / 4);
+	transform: translate(calc($rem / 4));
 }
 
 //? ------------------------------------------------ ПЕРЕМЕННЫЕ ------------------------------------------------ ?//

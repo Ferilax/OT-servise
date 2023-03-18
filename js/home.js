@@ -1,4 +1,8 @@
 "use strict";
+import './header.js';
+import { CreateBlock } from './module-constructor1.js';
+import './module-pseudoSelect.js';
+const fsdfsf = require('lasds')
 
 new Swiper('.swiper1', {
 	pagination: {

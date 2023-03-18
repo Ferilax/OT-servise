@@ -143,6 +143,9 @@
 }
 
 .aside {
+	.container {
+		height: 100%;
+	}
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -152,9 +155,15 @@
 	background-color: white;
 	border-right: 0.1rem solid $whiteEF; 
 
-	&__body {}
+	&__body {
+		height: 100%;
+	}
 
-	&__ul {}
+	&__ul {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
 
 	&__li {
 		position: relative;
@@ -179,6 +188,9 @@
 			}
 			//background: #EFF1F8;
 		}
+		&:nth-last-child(1) {
+			margin-top: auto;
+		}
 	}
 	&__li.active {
 		&::after {
@@ -200,4 +212,6 @@
 	&__span {
 		transition: 0.2s;
 	}
+
+
 }

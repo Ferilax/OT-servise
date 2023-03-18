@@ -1,3 +1,8 @@
+"use strict";
+import './header.js';
+import './module-ibg.js';
+import { CreateBlock } from './module-constructor1.js';
+
 const slider = document.querySelector('.detailed-new__slider');
 const allSlides = slider.querySelectorAll('.detailed-new__slide');
 const miniMap = document.querySelector('.detailed-new__slider-minimap');
@@ -59,3 +64,23 @@ if (document.querySelector('.detailed-new__slider-minimap').addEventListener) {
 	// IE 6/7/8
 	document.querySelector('.detailed-new__slider-minimap').attachEvent('onmousewheel', scrollHorizontally);
 }
+
+//! создаем блоки
+const moreNewsItems = document.querySelector('.more-news__items');
+let newsItem1 = new CreateBlock('#Электричество, #Строительство', 'Официально открыт корпоративный портал нашей компании', '19.07.2020', 'Сегодня официально заработал корпоративный портал нашей компании...', 'img/Home/main/news.png', 'detailedNews.html');
+newsItem1.addElement(moreNewsItems);
+let newsItem2 = new CreateBlock('#Электричество, #Строительство', 'Официально открыт корпоративный портал нашей компании', '19.07.2020', 'Сегодня официально заработал корпоративный портал нашей компании...', 'img/Home/main/news.png', 'detailedNews.html');
+newsItem2.addElement(moreNewsItems);
+let newsItem3 = new CreateBlock('#Электричество, #Строительство', 'Официально открыт корпоративный портал нашей компании', '19.07.2020', 'Сегодня официально заработал корпоративный портал нашей компании...', 'img/Home/main/news.png', 'detailedNews.html');
+newsItem3.addElement(moreNewsItems);
+let newsItem4 = new CreateBlock('#Электричество, #Строительство', 'Официально открыт корпоративный портал нашей компании', '19.07.2020', 'Сегодня официально заработал корпоративный портал нашей компании...', 'img/Home/main/news.png', 'detailedNews.html');
+newsItem4.addElement(moreNewsItems);
+newsItem4.addElement(moreNewsItems);
+newsItem4.addElement(moreNewsItems);
+newsItem4.addElement(moreNewsItems);
+newsItem4.addElement(moreNewsItems);
+newsItem4.addElement(moreNewsItems);
+newsItem4.addElement(moreNewsItems);
+newsItem4.addElement(moreNewsItems);
+newsItem4.addElement(moreNewsItems);
+newsItem4.addElement(moreNewsItems);

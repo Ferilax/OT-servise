@@ -24,8 +24,6 @@
 		width: 100%;
 	}
 
-	&__path {margin-bottom: 1.6rem;}
-
 	&__title {margin-bottom: 3rem;}
 
 	&__subtitle {}
@@ -297,6 +295,7 @@
 	}
 
 	&__icon {
+		@include click-icon(2rem);
 	}
 	
 	&__edit {
@@ -407,6 +406,7 @@
 	}
 	&__delete {
 		opacity: 0;
+		@include click-icon(2rem);
 	}
 
 	&__item {
@@ -556,12 +556,7 @@
 	}
 
 	&__close {
-		cursor: pointer;
-		width: 3.4rem;
-		height: 3.4rem;
-		padding: 0.5rem;
-		transform: translateX(0.5rem);
-		@include img(contain);
+		@include click-icon(2.4rem);
 	}
 
 	&__main {
@@ -632,12 +627,7 @@
 	}
 
 	&__close {
-		cursor: pointer;
-		width: 3.4rem;
-		height: 3.4rem;
-		padding: 0.5rem;
-		transform: translateX(0.5rem);
-		@include img(contain);
+		@include click-icon(2.4rem);
 	}
 
 	&__main {

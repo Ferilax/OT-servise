@@ -1,3 +1,8 @@
+"use strict";
+import './header.js';
+import './module-ibg.js';
+import { CreateBlock } from './module-constructor1.js';
+
 const newsItems = document.querySelector('.news__items')
 
 let newsItem1 = new CreateBlock('#Электричество, #Строительство', 'Официально открыт корпоративный портал нашей компании', '19.07.2020', 'Сегодня официально заработал корпоративный портал нашей компании...', 'img/Home/main/news.png', 'detailedNews.html');

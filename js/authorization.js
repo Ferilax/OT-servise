@@ -1,4 +1,5 @@
 "use strict";
+import './module-input.js';
 /*
 new Swiper('.swiper1', {
     pagination: {

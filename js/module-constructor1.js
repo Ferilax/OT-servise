@@ -1,4 +1,4 @@
-class CreateBlock {
+export class CreateBlock {
 	postType = 2;
 
 	constructor(hashtags, title, date, text, imgSrc, link) {

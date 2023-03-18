@@ -1,5 +1,6 @@
 *{
 	font-size: 1.6rem;
+	color: $grayDark37;
 }
 
 *::-webkit-scrollbar {
@@ -39,6 +40,11 @@ html {
 		height: 100%;
 		overflow-y: scroll;
 		overflow-x: hidden;
+		display: flex;
+		flex-direction: column;
+	}
+	article {
+		flex: 1 1 auto;
 	}
 }
 
@@ -95,6 +101,7 @@ html {
 
 .path {
 	color: $gray8D;
+	margin-bottom: 1.6rem;
 }
 
 .button {
@@ -251,21 +258,6 @@ html {
 	}
 }
 
-.click-icon {
-	//* Only for 20px icon
-	cursor: pointer;
-	width: 4rem;
-	height: 4rem;
-	padding: 1rem;
-	transform: translate(1rem, 0);
-	@include img(contain);
-	svg {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
-	}
-}
-
 .default-select {
 	position: relative;
 
@@ -393,6 +385,25 @@ html {
 
 		&::after {
 			background-image: url('../img/all/blackArrowUp.svg');
+		}
+	}
+}
+
+.prev-title {
+	margin-bottom: 3rem;
+	a {
+		padding-left: 3.2rem;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 2.4rem;
+			height: 3.8rem;
+			background: url('../../img/News/arrowLeft.svg') 50%/contain no-repeat;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
 		}
 	}
 }

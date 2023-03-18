@@ -7,7 +7,9 @@
 	<link rel="stylesheet" href="css/style.css" />
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width" />
+	
 </head>
+
 <body>
 	<div class="wrapper">
 		<header class="header-home">
@@ -89,7 +91,7 @@
 				</div>
 			</div>
 		</header>
-		
+
 		<aside class="aside">
 			<div class="container">
 				<nav class="aside__body">
@@ -118,7 +120,7 @@
 								<span class="aside__span">Оповещения</span>
 							</a>
 						</li>
-						<li class="aside__li active">
+						<li class="aside__li">
 							<a href="news.html" class="aside__a">
 								<img src="img/Home/i/i5.png" alt="" class="aside__icon">
 								<span class="aside__span">Новости</span>
@@ -148,7 +150,7 @@
 								<span class="aside__span">Вопрос-ответ</span>
 							</a>
 						</li>
-						<li class="aside__li">
+						<li class="aside__li active">
 							<a href="feedback.html" class="aside__a">
 								<img src="img/Home/i/i10.png" alt="" class="aside__icon">
 								<span class="aside__span">Обратная связь</span>
@@ -158,24 +160,66 @@
 				</nav>
 			</div>
 		</aside>
-		
+
 		<main class="main">
 			<div class="main-body">
-				<article class="news">
+				
+				<article class="reply">
 					<div class="container">
-						<div class="news__path path">Главная / Новости</div>
-						<h1 class="news__title title">Новости</h1>
-						<div class="news__tags">
-							<div class="news__tag selected">Все новости</div>
-							<div class="news__tag">#Новости компании</div>
-							<div class="news__tag">#Бизнес</div>
-							<div class="news__tag">#Новый год</div>
-						</div>
-						<div class="news__items"></div>
+						<div class="reply__path path">Главная / Обратная связь / Ответ на вопрос</div>
+						<h1 class="reply__title"><a href="feedback.html" class="title">Ответ на вопрос</a></h1>
+
+                  <div class="reply__row">
+                     <section class="reply-ask">
+                        <div class="reply-ask__body">
+                           <h2 class="reply-ask__title h2">Тема обращения: сломанный файл</h2>
+                           <div class="reply-ask__fio">
+                              ФИО: <span class="reply-ask__fio-value">Иван Иванович</span>
+                           </div>
+                           <div class="reply-ask__company">
+                              Компания: <span class="reply-ask__company-value">Логарифм ООО</span>
+                           </div>
+                           <div class="reply-ask__date">
+                              Дата обращения: <span class="reply-ask__date-value">18.10.2020</span>
+                           </div>
+                           <p class="reply-ask__text">
+                              Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum Давно выяснено Давно выяснено, что при оценке дизайна и композиции читаемый...
+                           </p>
+                           <div class="reply-ask__imgs">
+                              <div class="reply-ask__img">
+                                 <img src="img/Home/main/action1.png" alt="">
+                              </div>
+                              <div class="reply-ask__img">
+                                 <img src="img/Home/main/action1.png" alt="">
+                              </div>
+                           </div>
+                           <div class="reply-ask__other-files">
+                              <div class="reply-ask__other-file">
+                                 <div class="ask__icon">
+                                    <img src="img/Files/pdf.svg" alt="">
+                                 </div>
+                                 <div class="ask__fileinfo">
+                                    File.pdf (38 КБ)
+                                 </div>
+                                <div class="reply-ask__view">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M0.667969 8.00002C0.667969 8.00002 3.33464 2.66669 8.0013 2.66669C12.668 2.66669 15.3346 8.00002 15.3346 8.00002C15.3346 8.00002 12.668 13.3334 8.0013 13.3334C3.33464 13.3334 0.667969 8.00002 0.667969 8.00002Z" stroke="#373737" stroke-linecap="round" stroke-linejoin="round"/>
+                                       <path d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z" stroke="#373737" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+										<div class="reply-ask__download">
+											
+										</div>
+                              </div>
+                           </div>
+                        </div>
+                     </section>
+                     <section class="reply-reply"></section>
+                  </div>
 					</div>
 				</article>
 
-				<footer class="footer">
+				<!-- <footer class="footer">
 					<div class="container">
 						<div class="footer__row">
 							<div class="footer__visionzero">
@@ -188,12 +232,13 @@
 							</div>
 						</div>
 					</div>
-				</footer>
+				</footer> -->
 			</div>
 		</main>
 	</div>
 
-	<script type="module" src="js/news.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script type="module" src="js/feedback.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,8 @@
 "use strict";
+import './header.js';
+import './module-pseudoSelect.js';
+import './module-ibg.js';
+import './module-input.js';
 
 const sectionPersonal = document.querySelector('.personal-settings');
 const sectionPersonalPlaceholders = document.querySelectorAll('.placeholder');

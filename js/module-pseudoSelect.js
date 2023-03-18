@@ -1,5 +1,6 @@
 //! Искусственный select>option
 const allSelect = document.querySelectorAll('.select');
+let textForFckingSpan;
 allSelect.forEach(el => {
 	let input = el.querySelector('.select__input');
 	let allList = el.querySelectorAll('.select__li');
@@ -24,7 +25,7 @@ allSelect.forEach(el => {
 		}
 	});
 
-	if (el.dataset.type === 'default') {
+	if (el.classList.contains('default-select')) {
 		el.addEventListener("mouseover", function (e) {
 			let hoveredList = e.target.closest('.select__li');
 			if (hoveredList) {
